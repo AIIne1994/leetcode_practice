@@ -1,7 +1,7 @@
 def calcEquation(equations, values, queries):
-	pass
+    pass
 
 
 if __name__ == "__main__":
-	pass
-	
+    pass
+    
