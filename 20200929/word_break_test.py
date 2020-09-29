@@ -1,7 +1,6 @@
 import unittest
 from word_break import *
 
-
 class WordBreakTest(unittest.TestCase):
     def test_simple_one(self):
         s = "leetcode"
