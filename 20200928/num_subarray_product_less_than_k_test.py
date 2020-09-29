@@ -8,6 +8,18 @@ class EvaluateDivisionTest(unittest.TestCase):
         expected = 8
         self.assertEqual(numSubarrayProductLessThanK(nums, k), expected)
 
+    def test_k_is_zero(self):
+        nums = [1, 2, 3]
+        k = 0
+        expected = 0
+        self.assertEqual(numSubarrayProductLessThanK(nums, k), expected)
+
+    def test_array_is_all_one(self):
+        nums = [1, 1, 1]
+        k = 1
+        expected = 0
+        self.assertEqual(numSubarrayProductLessThanK(nums, k), expected)
+
 
 if __name__ == "__main__":
     unittest.main()
