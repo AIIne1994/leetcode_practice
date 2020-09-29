@@ -1,7 +1,7 @@
 def numSubarrayProductLessThanK(nums, k):
     if k <= 1:
         return 0
-        
+
     ans = left = 0
     prod = 1
     for right, val in enumerate(nums):
@@ -13,8 +13,6 @@ def numSubarrayProductLessThanK(nums, k):
     return ans
 
 
-
 if __name__ == "__main__":
-    nums = [10, 5, 2, 6]
-    k = 100
-    print(numSubarrayProductLessThanK(nums, k))
+    pass
+    
