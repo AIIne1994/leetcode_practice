@@ -18,9 +18,7 @@ def word_break(s, wordDict):
     return breaker(s)
 
 
-
 if __name__ == "__main__":
     s = "cars"
     wordDict = ["car","ca","rs"]
     print(word_break(s, wordDict))
-
