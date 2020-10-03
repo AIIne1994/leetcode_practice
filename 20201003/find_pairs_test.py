@@ -32,6 +32,12 @@ class FindPairsTest(unittest.TestCase):
         expected = 2
         self.assertEqual(find_pairs(nums, k), expected)
 
+    def test_all_the_same(self):
+        nums = [1, 1, 1, 1, 1]
+        k = 0
+        expected = 1
+        self.assertEqual(find_pairs(nums, k), expected)
+
 
 if __name__ == "__main__":
     unittest.main()
