@@ -2,7 +2,7 @@ import unittest
 from combination_sum import *
 
 class NumberOfRecentCallsTest(unittest.TestCase):
-    def test_simple_one(self):
+    def test_example_one(self):
         candidates = [2, 3, 6, 6]
         target = 7
         expected = [[2, 2, 3], [7]]
