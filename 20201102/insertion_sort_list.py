@@ -21,14 +21,32 @@ def head_list_generater(head_list):
 
 
 def insertion_sort_list(head):
-    now_node = head
-    while now_node.next not None:
-        next_node = now_node.next
+    if not head or not head.next: return head
+    res = ListNode(0, head)
+    cur, nxt = head.next, head.next.next
+    head.next = None
+    pre_pre = res
+    while cur:
+        pre = pre_pre.next if cur.val > pre_pre.next.val else res
+        while pre.next and cur.val > pre.next.val: 
+            pre = pre.next
+        cur.next, pre.next = pre.next, cur
+        cur, pre_pre = nxt, pre
+        nxt = nxt.next if nxt else nxt
+    return res.next
 
-    
 
 
 
 
 if __name__ == '__main__':
-    pass
+    head_input_list = [4,2,1,3]
+    head_list = head_list_generater(head_input_list)
+    head = head_list[0]
+    p = dummy = ListNode()
+    print(p.val, dummy.val)
+    dummy.next = head_list[0]
+    p.next = head_list[1]
+    p = p.next
+    p.next = None
+    print(p.val, dummy.next.val)

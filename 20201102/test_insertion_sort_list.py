@@ -7,7 +7,10 @@ class InsertionSortListTest(unittest.TestCase):
         head_input_list = [4,2,1,3]
         head_list = head_list_generater(head_input_list)
         head = head_list[0]
-        expected = 5
+        sort_list_node = insertion_sort_list(head)
+        
+        expected = [1, 2, 3, 4]
+
         self.assertEqual(insertion_sort_list(head), expected)
 
     def test_example_two(self):
