@@ -32,7 +32,13 @@ class TestCanFormArray(unittest.TestCase):
         pieces = [[2, 4, 6, 8]]
         expected = False
         self.assertEqual(canFormArray(arr, pieces), expected)
-        
+
+    def test_example_six(self):
+        arr = [1,2,3]
+        pieces = [[2],[1,3]]
+        expected = False
+        self.assertEqual(canFormArray(arr, pieces), expected)
+
 
 if __name__ == '__main__':
     unittest.main()
