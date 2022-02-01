@@ -1,9 +1,11 @@
 def maxProfit(prices: list[int]) -> int:
-    buyprice = prices[0]
-    profits = [0]
-    for day, price in enumerate(prices):
-        if price < buyprice:
-            buyprice = price
-        profits.append(price - buyprice)
-
-    return max(profits)
+    buyday = 0
+    sellday = 0
+    result = 0
+    while sellday < len(prices):
+        if prices[sellday] < prices[buyday]:
+            buyday = sellday
+        else:
+            result = max(result, prices[sellday] - prices[buyday])
+        sellday += 1
+    return result
